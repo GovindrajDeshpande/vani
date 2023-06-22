@@ -1,0 +1,102 @@
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Bookname</th>
+        <th>Book Code</th>
+        <th>Author</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>Don Quixote</td>
+            <td>101</td>
+            <td>By Miguel de Cervantes</td>
+            
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Lord of the Rings.</td>
+            <td>102</td>
+            <td> By J.R.R. Tolkien</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Harry Potter and the Sorcerer's Stone.</td>
+            <td>103</td>
+            <td> By J.K. Rowling</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>And Then There Were None.</td>
+            <td>104</td>
+            <td> By Agatha Christie.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Alice's Adventures in Wonderland.</td>
+            <td>105</td>
+            <td> By Lewis Carroll.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Pinocchio</td>
+            <td>106</td>
+            <td>By Carlo Collodi</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <form>
+    <!-- Name input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form4Example1" class="form-control"[(ngModel)]="name" />
+      <label class="form-label" for="form4Example1">Name</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <input type="number" id="form4Example2" class="form-control"[(ngModel)]="bc" />
+        <label class="form-label" for="form4Example2">Book Code</label>
+      </div>
+  
+    
+    <div class="form-outline mb-4">
+      <input type="text" id="form4Example2" class="form-control"[(ngModel)]="authorname" />
+      <label class="form-label" for="form4Example2">Author</label>
+    </div>
+  
+    
+    <div class="form-outline mb-4">
+      <input type="email" class="form-control" id="form4Example3" rows="4"[(ngModel)]="emailid" />
+      <label class="form-label" for="form4Example3">Email</label>
+    </div>
+  
+   
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4" (click)="onAdd()">Add Book</button>
+  </form>
+
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>SR.NO</th>
+        <th>Bookname</th>
+        <th>Book Code</th>
+        <th>Author</th>
+        <th>Email Id of the Student</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dt of data; let i=index">
+            <td>{{i}}</td>
+            <td>{{dt.bookname}}</td>
+            <td>{{dt.bookcode}}</td>
+            <td>{{dt.author}}</td>
+            <td>{{dt.email}}</td>
+            
+        </tr>
+    </tbody>
+  </table>

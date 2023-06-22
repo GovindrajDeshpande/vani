@@ -1,0 +1,29 @@
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Course</th>
+        <th>EmailID</th>
+        <!-- <th>Actions</th> -->
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tsk of tasks; let i=index">
+            <td>{{i}}</td>
+            <td>{{tsk.firstname}}</td>
+            <td>{{tsk.lastname}}</td>
+            <td>{{tsk.address}}</td>
+            <td>{{tsk.gender}}</td>
+            <td>{{tsk.dob}}</td>
+            <td>{{tsk.course}}</td>
+            <td>{{tsk.email}}</td>
+            <!-- <td><button>Edit</button>
+            <button (click)="onDelete(i)">Delete</button></td> -->
+        </tr>
+    </tbody>
+  </table>
